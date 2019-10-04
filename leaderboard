@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace leaderboard
+{
+    public class Leaderboard
+    {
+        public static string[,] Size(int numberOfRowItems, int numberOfColumns)
+        {
+            string[,] array2D = new string[numberOfRowItems, numberOfColumns];
+
+            for (int i = 0; i < numberOfColumns; i++)
+            {
+                for (int j = 0; j < numberOfRowItems; j++)
+                {
+                    array2D[j, i] = "0";
+                }
+            }
+
+            return array2D;
+        }
+
+        public static void Debug()
+        {
+            string[,] a = Leaderboard.Size(5, 10);
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write(a[j, i]);
+                }
+
+                Console.WriteLine("");
+            }
+        }
+    }
+}
